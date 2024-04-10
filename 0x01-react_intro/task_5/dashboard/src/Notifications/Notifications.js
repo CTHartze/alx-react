@@ -1,18 +1,18 @@
 import React from 'react';
 import './Notifications.css';
-import closeIcon from './close-icon.png';
-import { getLatestNotification } from './utils';
+import closeIcon from '../assets/close-icon.png';
+import { getLatestNotification } from '../utils/utils';
 
-export const Notifications = () => {
+function Notifications() {
   return (
     <div className='Notifications'>
       <p>Here is the list of notifications</p>
       <button
-        style={{ position: 'absolute', top: '7px', right: '7px', border: 'none', background: 'none', padding: '0' }}
-        aria-label='Close'
-        onClick={console.log('Close button has been clicked')}
+        style={{ color: "#3a3a3a", fontWeight: "bold", background: "none", border: "none", fontSize: "15px", position: "absolute", right: "2px", top: "2px", cursor: "pointer" }}
+        aria-label="Close"
+        onClick={console.log("Close button has been clicked")}
       >
-        <img style={{ display: 'inline', marginTop: '5px', marginRight: '5px', padding: '0' }} src={closeIcon} alt='Close' width="15px"/>
+        <img src={closeIcon} alt="closeIcon" width="10px" />
       </button>
       <ul>
         <li data='default'>New course available</li>
@@ -22,3 +22,5 @@ export const Notifications = () => {
     </div>
   );
 }
+
+export default Notifications;
